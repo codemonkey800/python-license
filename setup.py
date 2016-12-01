@@ -10,5 +10,9 @@ setup(
     url='https://gitlab.com/codemonkey800/python-license',
     license='MIT',
     py_modules=['license'],
-    scripts=['license'],
+    entry_points={
+        'console_scripts': [
+            'license=license:main',
+        ],
+    },
 )
