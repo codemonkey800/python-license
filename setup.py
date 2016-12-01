@@ -1,4 +1,15 @@
-from distutils.core import setup
+from os.path import dirname, join
+from setuptools import setup
+
+
+def read(filename):
+    return open(
+        join(
+            dirname(__file__),
+            filename,
+        ),
+    ).read()
+
 
 setup(
     name='license',
@@ -10,6 +21,7 @@ setup(
     url='https://gitlab.com/codemonkey800/python-license',
     license='MIT',
     py_modules=['license'],
+    long_description=read('README.md'),
     entry_points={
         'console_scripts': [
             'license=license:main',
