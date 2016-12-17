@@ -9,9 +9,9 @@ GitHub.
     - [Setuptools](#setuptools)
     - [Arch User Repository](#arch-user-repository)
 - [Usage](#usage)
-    - [`shell` Command](shell-command)
-    - [`list` Command](list-command)
-    - [`get` Command](get-command)
+    - [`shell` Command](#shell-command)
+    - [`list` Command](#list-command)
+    - [`get` Command](#get-command)
 - [Caveats](#caveats)
 - [License](#license)
 
