@@ -1,5 +1,5 @@
 from os.path import dirname, join
-from setuptools import setup
+from setuptools import find_packages, setup
 
 
 def read(filename):
@@ -13,18 +13,27 @@ def read(filename):
 
 setup(
     name='license',
-    version='1.0',
-    description=('A command line app that fetches open '
-                 'source licenses from https://opensource.org.'),
-    author='Jeremy Asuncion',
-    author_email='jeremyasuncion808@gmail.com',
-    url='https://gitlab.com/codemonkey800/python-license',
-    license='MIT',
+    version='0.1.0',
+    packages=find_packages(),
+    install_requires=[
+        'click',
+        'click-completion',
+        'click-didyoumean',
+        'requests',
+        'requests-cache',
+    ],
     py_modules=['license'],
-    long_description=read('README.md'),
     entry_points={
         'console_scripts': [
-            'license=license:main',
+            'license=license.__main__:main',
         ],
     },
+
+    # Package Metadata
+    author='Jeremy Asuncion',
+    author_email='jeremyasuncion808@gmail.com',
+    description=('A command line app that fetches opensource licenses.'),
+    long_description=read('README.md'),
+    url='https://github.com/codemonkey800/python-license',
+    license='MIT',
 )
