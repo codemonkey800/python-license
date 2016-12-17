@@ -19,6 +19,7 @@ setup(
         'click',
         'click-completion',
         'click-didyoumean',
+        'psutil',
         'requests',
         'requests-cache',
     ],
