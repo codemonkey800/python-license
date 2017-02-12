@@ -109,7 +109,7 @@ $ license get --stdout mit > LICENSE
 # Caveats
 
 As of writing, the licenses aren't templated and are provided as is. For the
-time being, you'll have to manually replace it for the time being:
+time being, you'll have to manually replace it:
 
 ```sh
 $ license get --stdout mit | sed -i 's/\[year\]/2016/g; s/\[fullname\]/my name lmao/g'
